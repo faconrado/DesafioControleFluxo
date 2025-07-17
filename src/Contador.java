@@ -2,22 +2,29 @@ import java.util.Scanner;
 
 public class Contador {
     public static void main(String[] args) {
+
+        while (true) {
+
         Scanner terminal = new Scanner(System.in);
         System.out.println("Digite o primeiro parâmetro: ");
         int parametroUm = terminal.nextInt();
         System.out.println("Digite o segundo parâmetro: ");
-        int parametroDois = terminal.nextInt();
-
+        int parametroDois = terminal.nextInt();                
+        
         try{
 
-            contar(parametroUm, parametroDois);                
-                
+            contar(parametroUm, parametroDois);
+            break; // Sai do Loop se a contagem for bem-sucedida
+                            
         }catch (ParametrosInvalidosException e){
 
             System.out.println("O segundo parâmetro deve ser maior que o primeiro!");
-        }  
-        terminal.close();      
-    }
+            
+        }
+        
+    }  
+    }     
+    
     
     
     static void contar(int parametroUm, int parametroDois) throws ParametrosInvalidosException{
@@ -31,10 +38,11 @@ public class Contador {
 
             System.out.println("Imprimindo o número: " + (parametroUm + i));            
         }
-    }   
-    
+    } 
+        
     public static class ParametrosInvalidosException extends Exception {
 }
+
   
 }
 
