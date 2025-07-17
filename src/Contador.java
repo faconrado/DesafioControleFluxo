@@ -9,15 +9,17 @@ public class Contador {
         int parametroDois = terminal.nextInt();
 
         try{
-            contar(parametroUm, parametroDois);  
-            for (parametroUm < parametroDois, parametroUm++){
 
-
-            }
+            for (parametroUm = parametroUm; parametroUm < parametroDois; parametroUm++){
+                
+                System.out.println("Imprimindo o número: " + parametroUm );
+                
+                }
+             
             
 
 
-        }catch (Exception exception){
+        }catch (ParametrosInvalidosException exception){
 
             System.out.println("O segundo parâmetro deve ser maior que o primeiro!");
         }
